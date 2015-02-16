@@ -1,8 +1,19 @@
 # possible useful notes
 # http://www.oldlinux.org/Linux.old/Linux-0.01/docs/Linux.pdf
 
-code_src = 'https://www.kernel.org/pub/linux/kernel/Historic/linux-0.01.tar.gz'
-
+import os
 from subprocess import call
-call(['wget', code_src])
+
+CODE_URL = 'https://www.kernel.org/pub/linux/kernel/Historic/linux-0.01.tar.gz'
+
+call(['wget', CODE_URL])
 call(['tar', '-xzvf', 'linux-0.01.tar.gz'])
+
+
+def pdf(path):
+    contents = os.listdir()
+    for node in contents:
+        pdf(path + '/' + node)
+
+pdf('../linux')
+  
