@@ -1,2 +1,2 @@
-# kernelpdf
-Python script to print the Linux Kernel 0.03 to pdf
+# printkernel
+Python script to put the Linux kernel 0.01 in a readable format, intended to send my kindle for reading.
